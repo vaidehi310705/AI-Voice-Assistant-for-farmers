@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // remove debug banner
       title: 'Dashboard Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const DashboardPage(), // start with dashboard
+      home: HomePage(),
+
+
     );
   }
 }
