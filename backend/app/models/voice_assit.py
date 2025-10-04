@@ -9,7 +9,7 @@ import io
 pygame.mixer.init()
 
 # Load PHI model
-MODEL_NAME = r"C:\Users\Kalyani\OneDrive\AI-Voice-Assistant-for-farmers\models\Phi-3-mini-4k-instruct-q4.gguf"
+MODEL_NAME = r"C:\Users\Phi-3-mini-4k-instruct-q4.gguf"
 model = GPT4All(MODEL_NAME, allow_download=False)
 
 translator = Translator()
