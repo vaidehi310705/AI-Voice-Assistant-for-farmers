@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <title>मराठी सहाय्यक | शेतकऱ्यांसाठी आवाजावर आधारित मदत</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="back.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🌾 मराठी सहाय्यक</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">मुख्यपृष्ठ</a></li>
+            <li><a href="contact.html">मदत केंद्र</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>🎙️ शेतकऱ्यांचा मराठी आवाज सहाय्यक</h1>
+            <p class="subtext">तुमचा प्रश्न बोला, सहाय्यक तुमच्याशी मराठीत बोलेल.</p>
+        </header>
+
+        <main class="conversation-container" id="conversation"></main>
+
+        <footer>
+            <div class="controls">
+                <button id="recordBtn">🎤 बोला</button>
+                <span class="status" id="status">बोला बटणावर क्लिक करा</span>
+            </div>
+            <audio id="audioResponse" controls></audio>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

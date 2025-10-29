@@ -1,6 +1,0 @@
-{
-  "python.analysis.extraPaths": [
-    "./backend/app"
-  ],
-  "cmake.sourceDirectory": "C:/Users/shruti vaidya/Desktop/manashree/MINI PROJECT S5/AI-Voice-Assistant-for-farmers/frontend/linux"
-}

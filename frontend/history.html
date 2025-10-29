@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>संवाद इतिहास</title>
+  <style>
+    body {
+      font-family: "Noto Sans Devanagari", sans-serif;
+      background: #e8f5e9;
+      padding: 20px;
+      color: #1b5e20;
+    }
+    .item {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-left: 6px solid #2e7d32;
+    }
+    h2 { text-align: center; }
+    audio { width: 100%; margin-top: 8px; }
+    a { color: #1565c0; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h2>🎧 संवाद इतिहास</h2>
+  <div id="historyList"></div>
+  <a href="index.html">↩️ मुख्यपृष्ठावर जा</a>
+
+  <script>
+    const historyList = document.getElementById("historyList");
+    const history = JSON.parse(localStorage.getItem("conversationHistory")) || [];
+
+    if (history.length === 0) {
+      historyList.innerHTML = "<p>अजून कोणताही संवाद जतन झालेला नाही.</p>";
+    } else {
+      history.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerHTML = `
+          <h3>${index + 1}. ${item.question}</h3>
+          <p><strong>उत्तर:</strong> ${item.answer}</p>
+          <p><small>${item.timestamp}</small></p>
+          <audio controls src="${item.audio}"></audio>
+        `;
+        historyList.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
